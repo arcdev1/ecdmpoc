@@ -192,19 +192,24 @@
 	<script src="./GCWeb/js/theme.min.js"></script>
 	<script>
 		$(initDataMart)
+
 		function initDataMart() {
 			$.ajax({ url: "/data/dummy-data.json" }).done(bindDataToTable)
 		}
+
 		function bindDataToTable(ajaxResponse) {
-			var data = ajaxResponse.map(function mapResponse(item) {
-				return Object.assign(item, {
-					name: "<a href='" + item.href + "''>" + item.name + "</a>",
-					icon: getIcon(item.type),
-					description: item.description == "Folder"
-						? item.description
-						: "<a href='https://data-donnees.ec.gc.ca/data/formats/?lang=en'>" + item.description + "</a>",
-				});
-			})
+			var data = ajaxResponse.map(
+				function mapResponse(item) {
+					return Object.assign(item, {
+						name: "<a href='" + item.href + "''>" + item.name + "</a>",
+						icon: getIcon(item.type),
+						description: item.description == "Folder"
+							? item.description
+							: "<a href='https://data-donnees.ec.gc.ca/data/formats/?lang=en'>" + item.description + "</a>",
+					});
+				}
+			)
+
 			var data_wb_tables = $("#indexlist").attr("data-wb-tables")
 			var initialTableOptionsObject = JSON.parse(data_wb_tables);
 			var newTableOptionsObject = {
@@ -226,6 +231,7 @@
 					"data": "description"
 				}]
 			}
+
 			var mergedTableOptionsObject = Object.assign(initialTableOptionsObject, newTableOptionsObject)
 			data_wb_tables = JSON.stringify(mergedTableOptionsObject)
 			$("#indexlist").attr("data-wb-tables", data_wb_tables)
