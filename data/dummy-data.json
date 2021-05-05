@@ -1,0 +1,34 @@
+[
+  {
+    "name": "air/",
+    "href": "https://data-donnees.ec.gc.ca/data/air/?lang=en",
+    "lastModified": "2021-04-26 02:08",
+    "size": null,
+    "type": "folder",
+    "description": "Folder"
+  },
+  {
+    "name": "climate/",
+    "href": "https://data-donnees.ec.gc.ca/data/climate/?lang=en",
+    "lastModified": "2021-04-26 02:38",
+    "type": "folder",
+    "size": null,
+    "description": "Folder"
+  },
+  {
+    "name": "datapackage.json",
+    "href": "https://data-donnees.ec.gc.ca/data/datapackage.json",
+    "lastModified": "2021-04-26 02:40",
+    "size": "1.8k",
+    "type": "application/json",
+    "description": "JavaScript Object Notation"
+  },
+  {
+    "name": "license-en.txt",
+    "href": "https://data-donnees.ec.gc.ca/data/license-en.txt",
+    "lastModified": "2021-04-26 02:40",
+    "size": "3.7k",
+    "type": "text",
+    "description": "Text File"
+  }
+]
