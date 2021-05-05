@@ -206,7 +206,7 @@
 			})
 			var data_wb_tables = $("#indexlist").attr("data-wb-tables")
 			var initialTableOptionsObject = JSON.parse(data_wb_tables);
-			var newTableOptionsObject = {
+			var newTableOptionsObject = ({
 				data,
 				"columns": [{
 					"data": "icon"
@@ -224,7 +224,7 @@
 				{
 					"data": "description"
 				}]
-			}
+			})
 			var mergedTableOptionsObject = Object.assign(initialTableOptionsObject, newTableOptionsObject)
 			data_wb_tables = JSON.stringify(mergedTableOptionsObject)
 			$("#indexlist").attr("data-wb-tables", data_wb_tables)
