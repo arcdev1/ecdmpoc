@@ -187,7 +187,7 @@
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-	<script src="./js/polyfill.js"></script>
+	<!-- <script src="./js/polyfill.js"></script> -->
 	<script src="./wet-boew/js/wet-boew.min.js"></script>
 	<script src="./GCWeb/js/theme.min.js"></script>
 	<script>
@@ -207,7 +207,7 @@
 			})
 			var data_wb_tables = $("#indexlist").attr("data-wb-tables")
 			var initialTableOptionsObject = JSON.parse(data_wb_tables);
-			var newTableOptionsObject = Object.create({
+			var newTableOptionsObject = {
 				data: data,
 				"columns": [{
 					"data": "icon"
@@ -225,7 +225,7 @@
 				{
 					"data": "description"
 				}]
-			})
+			}
 			var mergedTableOptionsObject = Object.assign(initialTableOptionsObject, newTableOptionsObject)
 			data_wb_tables = JSON.stringify(mergedTableOptionsObject)
 			$("#indexlist").attr("data-wb-tables", data_wb_tables)
