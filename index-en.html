@@ -206,7 +206,7 @@
 			})
 			var data_wb_tables = $("#indexlist").attr("data-wb-tables")
 			var initialTableOptionsObject = JSON.parse(data_wb_tables);
-			var newTableOptionsObject = ({
+			var newTableOptionsObject = Object.create({
 				data,
 				"columns": [{
 					"data": "icon"
